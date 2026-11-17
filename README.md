@@ -1,21 +1,21 @@
-# SoundTouch
+# Inkluwatch
 ### Conversão de Estímulos Sonoros em Estímulos Táteis
 
 Aplicativo que identifica sons específicos do ambiente e os transforma em padrões de vibração enviados a um smartwatch, promovendo acessibilidade, autonomia e inclusão para pessoas com deficiência auditiva.
 
 ## 📌 Informações Gerais
 
-- **Nome do Projeto:** SoundTouch
-- **Equipe:** A definir
+- **Nome do Projeto:** Inkluwatch
+- **Equipe:** Artur de Assis, David Balmart, Fábio Rodrigues, Lucas Soares, Miguel Bernardo, Nickolas Bueno, Nicolas Rodrigues
 - **Curso:** Técnico em Informática
 - **Instituição:** FUNEC Riacho
 - **Ano/Semestre:** 2026
-- **Professor Orientador:** A definir
+- **Professor Orientador:** Rangel Rodrigues
 - **Cliente/Setor Solicitante:** Projeto de acessibilidade e inclusão tecnológica.
 
 ## 🎯 Objetivo do Projeto
 
-Desenvolver uma solução tecnológica acessível que transforme estímulos sonoros do ambiente em padrões de vibração específicos, permitindo que pessoas com deficiência auditiva identifiquem diferentes sons e alertas por meio de um smartwatch.
+Desenvolver uma solução tecnológica acessível que transforme estímulos sonoros do ambiente em padrões de vibração específicos, permitindo que pessoas com deficiência auditiva identifiquem diferentes sons e alertas por meio de um sistema para smartwatch.
 
 O projeto busca ampliar a autonomia, a segurança e a inclusão dessas pessoas, facilitando a percepção de acontecimentos sonoros no cotidiano e proporcionando maior independência em suas atividades diárias.
 
@@ -34,7 +34,7 @@ A ausência dessas informações pode comprometer a percepção de acontecimento
 
 ## 💡 Solução Proposta
 
-O SoundTouch propõe o desenvolvimento de um aplicativo integrado a um smartwatch, capaz de captar e identificar sons específicos do ambiente, convertendo-os em padrões distintos de vibração.
+O Inkluwatch propõe o desenvolvimento de um aplicativo integrado a um smartwatch, capaz de captar e identificar sons específicos do ambiente, convertendo-os em padrões distintos de vibração.
 
 Cada categoria sonora será associada a um estímulo tátil próprio, permitindo que o usuário reconheça diferentes acontecimentos por meio do tato.
 
@@ -65,6 +65,7 @@ O aplicativo será desenvolvido inicialmente para Android, utilizando Flutter e 
 - **Linguagem principal:** Dart;
 - **Framework:** Flutter;
 - **Plataforma inicial:** Android;
+- **Protótipo:** HTML, CSS, Javascript;
 - **Reconhecimento de áudio:** Tecnologias de processamento e classificação de áudio a serem definidas;
 - **Comunicação com smartwatch:** Bluetooth Low Energy (BLE), sujeito à compatibilidade do dispositivo;
 - **IDE:** Visual Studio Code;
@@ -73,8 +74,8 @@ O aplicativo será desenvolvido inicialmente para Android, utilizando Flutter e 
 
 ## 🗂️ Estrutura do Projeto
 
-```text
-sound_touch/
+```
+inkluwatch/
 │
 ├── android/
 │
@@ -121,22 +122,25 @@ sound_touch/
 
 | Etapa | Descrição | Responsável | Data |
 |---|---|---|---|
-| 1 | Levantamento de requisitos | Equipe | A definir |
-| 2 | Planejamento e modelagem | Equipe | A definir |
-| 3 | Configuração do ambiente e desenvolvimento inicial | Equipe | A definir |
-| 4 | Implementação da captura e classificação de áudio | Equipe | A definir |
-| 5 | Integração com smartwatch | Equipe | A definir |
-| 6 | Testes e validação | Equipe | A definir |
-| 7 | Documentação e apresentação | Equipe | A definir |
+| 1 | Levantamento de requisitos | Equipe | 
+| 2 | Planejamento e modelagem | Equipe | 
+| 3 | Configuração do ambiente e desenvolvimento inicial | Equipe | 
+| 4 | Implementação da captura e classificação de áudio | Equipe | 
+| 5 | Integração com smartwatch | Equipe |
+| 6 | Testes e validação | Equipe | 
+| 7 | Documentação e apresentação | Equipe |
 
 ## 🧑‍💻 Integrantes da Equipe
 
 | Nome | Função | Responsabilidade |
 |---|---|---|
-| A definir | Desenvolvedor | Desenvolvimento do aplicativo |
-| A definir | Desenvolvedor | Processamento e classificação de áudio |
-| A definir | Pesquisador | Integração com smartwatch |
-| A definir | Documentação | Documentação e organização do projeto |
+| Artur de Assis | Desenvolvedor | Desenvolvimento do aplicativo |
+| Fábio Rodrigues | Desenvolvedor | Processamento e classificação de áudio |
+| Nickloas Bueno | Desenvolvedor | Integração com smartwatch |
+| Nicolas Rodrigues | Pesquisador | Documentação e organização do projeto |
+| David Balmart | Documentação | Documentação e organização do projeto |
+| Miguel Bernardo | Documentação | Documentação e organização do projeto |
+| Lucas Soares | Documentação | Documentação e organização do projeto |
 
 ## 🔐 Controle de Acesso
 
@@ -160,13 +164,13 @@ Os protótipos de interface e diagramas de funcionamento serão adicionados conf
 **1. Clone o repositório:**
 
 ```bash
-git clone URL_DO_REPOSITORIO
+git clone (https://github.com/arturassisrf0/Projeto_Inkluwatch_Mostra)
 ```
 
 **2. Entre na pasta do projeto:**
 
 ```bash
-cd sound_touch
+cd inkluwatch
 ```
 
 **3. Instale as dependências:**
@@ -188,5 +192,3 @@ flutter run
 O desenvolvimento será realizado de maneira incremental, começando pela estrutura do aplicativo e implementação dos padrões de vibração, seguindo para o reconhecimento automático de áudio e, posteriormente, a integração com o smartwatch.
 
 ---
-
-**SoundTouch – Transformando sons em sensações.**
