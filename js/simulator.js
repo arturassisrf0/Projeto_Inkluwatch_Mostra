@@ -64,16 +64,22 @@ ST.sim.playSound = function (id) {
   sound.seq.forEach(ms => {
     const duration = Math.abs(ms) / 1000;
     if (ms > 0) {
-      const osc = ctx.createOscillator(), gain = ctx.createGain();
-      osc.type = 'triangle';
-      osc.frequency.setValueAtTime(105, now + elapsed);
-      gain.gain.setValueAtTime(.001, now + elapsed);
-      gain.gain.linearRampToValueAtTime(.075, now + elapsed + .025);
-      gain.gain.setValueAtTime(.075, now + elapsed + Math.max(.03, duration - .025));
-      gain.gain.linearRampToValueAtTime(.001, now + elapsed + duration);
-      osc.connect(gain).connect(ctx.destination);
-      osc.start(now + elapsed); osc.stop(now + elapsed + duration + .01);
-      this.audio.nodes.add(osc); osc.onended = () => this.audio.nodes.delete(osc);
+      // Fundamental e harmônico tornam o pulso audível em alto-falantes pequenos,
+      // que quase não reproduzem frequências muito graves.
+      const envelope = ctx.createGain();
+      envelope.gain.setValueAtTime(.001, now + elapsed);
+      envelope.gain.linearRampToValueAtTime(.16, now + elapsed + .012);
+      envelope.gain.setValueAtTime(.16, now + elapsed + Math.max(.02, duration - .012));
+      envelope.gain.linearRampToValueAtTime(.001, now + elapsed + duration);
+      envelope.connect(ctx.destination);
+      [[180, 'square', 1], [360, 'sine', .28]].forEach(([frequency, type, level]) => {
+        const osc = ctx.createOscillator(), voiceGain = ctx.createGain();
+        osc.type = type; osc.frequency.setValueAtTime(frequency, now + elapsed);
+        voiceGain.gain.value = level;
+        osc.connect(voiceGain).connect(envelope);
+        osc.start(now + elapsed); osc.stop(now + elapsed + duration + .01);
+        this.audio.nodes.add(osc); osc.onended = () => this.audio.nodes.delete(osc);
+      });
     }
     elapsed += duration;
   });
